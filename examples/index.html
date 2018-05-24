@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bloch Sphere</title>
+  <style>
+    #renderer,html,body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button onclick="blochSphere.one(0)">1></button>
+    <button onclick="blochSphere.zero(0)">0></button>
+    <button onclick="blochSphere.h(0)">h()</button>
+    <button onclick="blochSphere.x(0)">x()</button>
+    <button onclick="blochSphere.y(0)">y()</button>
+    <button onclick="blochSphere.z(0)">z()</button>
+  </div>
+  <div id="renderer"></div>
+</body>
+<script src="../build/BlochSphere.js"></script>
+<script>
+  const renderer = document.getElementById('renderer')
+  const blochSphere = new BlochSphere(renderer, 1)
+</script>
+</html>
