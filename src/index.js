@@ -149,4 +149,8 @@ export default class BlochSphere {
   one(index) {
     this.arrow[index].lookAt(new THREE.Vector3(0, -1, 0))
   }
+
+  init(x, y, z, index) {
+    this.arrow[index].lookAt(new THREE.Vector3(x, z, y))
+  }
 }

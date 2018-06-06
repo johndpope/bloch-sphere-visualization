@@ -20,6 +20,10 @@
     <button onclick="blochSphere.x(0)">x()</button>
     <button onclick="blochSphere.y(0)">y()</button>
     <button onclick="blochSphere.z(0)">z()</button>
+    <input type="text" id="x" placeholder="x">
+    <input type="text" id="y" placeholder="y">
+    <input type="text" id="z" placeholder="z">
+    <button onclick="init()">init</button>
   </div>
   <div id="renderer"></div>
 </body>
@@ -27,5 +31,15 @@
 <script>
   const renderer = document.getElementById('renderer')
   const blochSphere = new BlochSphere(renderer, 1)
+  function init() {
+    const x = parseFloat(document.getElementById("x").value, 10)
+    const y = parseFloat(document.getElementById("y").value, 10)
+    const z = parseFloat(document.getElementById("z").value, 10)
+    console.log(x, y, z)
+    if ( Number.isNaN(x) || Number.isNaN(y) || Number.isNaN(z) ) {
+      return
+    }
+    blochSphere.init(x, y, z, 0)
+  }
 </script>
 </html>

@@ -25296,15 +25296,6 @@
 	      });
 	    }
 	  }, {
-	    key: 'cx',
-	    value: function cx() {}
-	  }, {
-	    key: 'cy',
-	    value: function cy() {}
-	  }, {
-	    key: 'cz',
-	    value: function cz() {}
-	  }, {
 	    key: 'x',
 	    value: function x(index) {
 	      var _this4 = this;
@@ -25354,11 +25345,10 @@
 	      this.arrow[index].lookAt(new Vector3(0, -1, 0));
 	    }
 	  }, {
-	    key: 't',
-	    value: function t(index) {}
-	  }, {
-	    key: 'tdg',
-	    value: function tdg(index) {}
+	    key: 'init',
+	    value: function init(x, y, z, index) {
+	      this.arrow[index].lookAt(new Vector3(x, z, y));
+	    }
 	  }]);
 	  return BlochSphere;
 	}();
